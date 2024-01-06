@@ -16,16 +16,19 @@ class _ResetSongsState extends State<ResetSongs> {
       scrollDirection: Axis.vertical,
       itemCount: 8,
       itemBuilder: (context, index) {
-        return Row(
-          children: [
-            Image.asset('assets/music_scroll.png'),
-            const SizedBox(width: 15),
-            const Text('Katy Perry - Roar', style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: Colors.white)),
-            const SizedBox(width: 15),
-            const Text('3:20', style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: Colors.white)),
-            const SizedBox(width: 15),
-            SvgPicture.asset('assets/play_button.svg'),
-          ],
+        return InkWell(
+          onTap: () => Navigator.pushNamed(context, 'perform_page'),
+          child: Row(
+            children: [
+              Image.asset('assets/music_scroll.png'),
+              const SizedBox(width: 15),
+              const Text('Katy Perry - Roar', style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: Colors.white)),
+              const SizedBox(width: 15),
+              const Text('3:20', style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: Colors.white)),
+              const SizedBox(width: 15),
+              SvgPicture.asset('assets/play_button.svg'),
+            ],
+          ),
         );
       },
     );
