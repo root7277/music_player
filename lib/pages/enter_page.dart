@@ -26,7 +26,16 @@ class _EnterPageState extends State<EnterPage> {
           const SizedBox(height: 40),
           const Text('Panda music app capability of Mp3 as well \nas Mp4 music', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: Colors.white)),
           const SizedBox(height: 40),
-          ElevatedButton(onPressed: () {}, style: ButtonStyle(minimumSize: const MaterialStatePropertyAll(Size(118, 40)), shape: MaterialStatePropertyAll(RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))), backgroundColor: const MaterialStatePropertyAll(Color.fromARGB(255, 157, 6, 59))), child: const Text('Play', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800, color: Colors.white))),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.pushNamed(context, 'home_page');
+            },
+            style: ButtonStyle(minimumSize: const MaterialStatePropertyAll(Size(118, 40)), shape: MaterialStatePropertyAll(RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))), backgroundColor: const MaterialStatePropertyAll(Color.fromARGB(255, 157, 6, 59))),
+            child: const Text(
+              'Play',
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800, color: Colors.white),
+            ),
+          ),
           const SizedBox(height: 50),
           const Text('Login from social media accounts', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: Colors.white)),
           const SizedBox(height: 50),

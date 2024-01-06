@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:music_player/pages/enter_page.dart';
+import 'package:music_player/pages/home_page.dart';
+import 'package:music_player/pages/perform_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,6 +22,8 @@ class _MyAppState extends State<MyApp> {
       initialRoute: 'enter_page',
       routes: {
         'enter_page': (context) => const EnterPage(),
+        'home_page': (context) => const HomePage(),
+        'perform_page': (context) => const PerformPage(),
       },
     );
   }
